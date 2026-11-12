@@ -1,0 +1,10 @@
+{
+  "name": "KCCEPT Presentation",
+  "short_name": "KCCEPT",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#10131b",
+  "theme_color": "#10131b",
+  "orientation": "any",
+  "icons": []
+}

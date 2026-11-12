@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#10131b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="KCCEPT">
+  <link rel="manifest" href="manifest.webmanifest">
+  <title>KCCEPT</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <header class="topbar" id="topbar">
+      <div class="brand">KCCEPT <span>Presentation</span></div>
+      <button id="openFile" class="primary">파일 열기</button>
+      <input id="fileInput" type="file" accept=".pdf,.pptx,application/pdf,application/vnd.openxmlformats-officedocument.presentationml.presentation" hidden>
+    </header>
+
+    <section id="welcome" class="welcome">
+      <div class="mark">K</div>
+      <h1>KCCEPT</h1>
+      <p>PDF와 PowerPoint 파일을<br>전체 화면으로 프레젠테이션하세요.</p>
+      <button id="welcomeOpen" class="primary large">파일 선택하기</button>
+      <small>지원 형식 · PDF / PPTX</small>
+    </section>
+
+    <section id="viewer" class="viewer" hidden>
+      <div id="slideStage" class="slide-stage" aria-live="polite">
+        <div id="slideContent" class="slide-content"></div>
+      </div>
+      <div class="controls" id="controls">
+        <button id="prev" aria-label="이전 페이지">‹</button>
+        <div class="counter"><input id="pageInput" type="number" min="1" value="1" aria-label="현재 페이지"> <span>/</span> <strong id="totalPages">1</strong></div>
+        <button id="next" aria-label="다음 페이지">›</button>
+        <button id="fullscreen" class="full-btn">전체 화면</button>
+        <button id="closeFile" class="close-btn">닫기</button>
+      </div>
+      <div id="fileName" class="file-name"></div>
+    </section>
+    <div id="message" class="message" role="status"></div>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
